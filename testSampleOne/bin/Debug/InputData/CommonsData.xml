@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<Commons>
+	<Browser>Chrome</Browser>
+	<Login>
+		<Url>http://siteone-21.siteoneservices.net</Url>
+		<Email>siteone21@yopmail.com</Email>
+		<Password>1234</Password>
+	</Login>	
+</Commons>	

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Login>
+	<Username type="id">Email</Username>
+	<Password type="id">Password</Password>
+	<RememberMe type="id">RememberMe</RememberMe>
+	<LoginButton type="xpath">
+		//input[@value='Sign in']
+	</LoginButton>
+</Login>

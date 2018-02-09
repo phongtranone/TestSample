@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RegionAndMarkets>
+	<NewButton type="xpath">//a[text()=' Region and Market']</NewButton>
+	<RegionItem type="xpath">//ul/li/a[text()='Region']</RegionItem>
+	<RegionName type="xpath">//div/input[@placeholder='Region name']</RegionName>
+	<RegionDescription type="xpath">//div[span[@id='vali-description']]/textarea</RegionDescription>
+	<DoneButtonRegion type="xpath">
+		//div[@class='modal-content' and descendant::input[@placeholder='Region name']]//div[@class='modal-footer']//button
+	</DoneButtonRegion>
+	<MarketItem type="xpath">//ul/li/a[text()='Market']</MarketItem>
+	<MarketName type="xpath">//div/input[@placeholder='Market name']</MarketName>
+	<MarketDescription type="xpath">//div[@class='modal-content' and descendant::input[@placeholder='Market name']]//input[@placeholder='Description']</MarketDescription>
+	<DoneButtonMarket type="xpath">
+		//div[@class='modal-content' and descendant::input[@placeholder='Market name']]//button[text()='Done']
+	</DoneButtonMarket>
+</RegionAndMarkets>
