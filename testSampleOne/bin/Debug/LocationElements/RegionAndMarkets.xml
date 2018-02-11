@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <RegionAndMarkets>
-	<NewButton type="xpath">//a[text()=' Region and Market']</NewButton>
+	<NewButton type="xpath">//button[text()='New ']</NewButton>
 	<RegionItem type="xpath">//ul/li/a[text()='Region']</RegionItem>
 	<RegionName type="xpath">//div/input[@placeholder='Region name']</RegionName>
 	<RegionDescription type="xpath">//div[span[@id='vali-description']]/textarea</RegionDescription>
