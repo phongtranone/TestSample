@@ -56,7 +56,7 @@ namespace testSampleOne
         protected string xmlFilePath;
         //define root
         //private XDocument xmlFile;
-       // List<XElement> elements;
+        // List<XElement> elements;
 
         IEnumerable<XElement> root;
         public LocationElements(string path)
@@ -75,7 +75,7 @@ namespace testSampleOne
 
     public class Animal
     {
-        private string name="test";
+        private string name = "test";
 
         public string ShowName()
         {
@@ -109,9 +109,24 @@ namespace testSampleOne
             //Console.WriteLine(ei1.Username.Value);
 
 
-            CreatNewRegion TC_CreateNewRegion = new CreatNewRegion();
+            //CreatNewRegion TC_CreateNewRegion = new CreatNewRegion();
+            //TC_CreateNewRegion.RunTest();
+            CreatNewRegionDebug TC_CreateNewRegion = new CreatNewRegionDebug();
             TC_CreateNewRegion.RunTest();
+
+
+
             Console.ReadLine();
+
+            //var testRunner = new TestRunner();
+
+            //CreatNewRegionDebug test1 = new CreatNewRegionDebug();
+            //CreatInsurancePolicy test2 = new CreatInsurancePolicy();
+            //CreatNewMarket test3 = new CreatNewMarket();
+
+            //testRunner.Run(test1, test2, test3);
+
+
             // CreatNewMarket TC_CreateNewMarket = new CreatNewMarket();
             // // TC_CreateNewMarket.RunTest();
 
@@ -128,5 +143,23 @@ namespace testSampleOne
 
 
         }
+
+
+    }
+
+    public class TestRunner
+    {
+        public void Run(params ITestCase[] testcases)
+        {
+            foreach (var c in testcases)
+            {
+                c.RunTest();
+            }
+        }
+    }
+
+    public interface ITestCase
+    {
+        void RunTest();
     }
 }

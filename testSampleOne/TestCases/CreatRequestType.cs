@@ -24,6 +24,8 @@ namespace testSampleOne.TestCases
 
         public void RunTest()
         {
+           
+
             common.OpenBrowser(common.BrowserName);
             common.GoToUrl(common.Url);
             // common.Login(common.UsernameLocator, common.UsernameValue, common.PasswordLocator, common.PasswordValue, common.RememberMeLocator, common.LoginBtnLocator);
@@ -38,5 +40,6 @@ namespace testSampleOne.TestCases
             common.WaitLoad(5000);
             common.CloseBrowser();
         }
+
     }
 }

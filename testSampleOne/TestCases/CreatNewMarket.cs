@@ -8,7 +8,7 @@ using testSampleOne.PageObject;
 
 namespace testSampleOne.TestCases
 {
-    public class CreatNewMarket
+    public class CreatNewMarket: ITestCase
     {
         Common common = new Common();
         RegionAndMarket RegionAndMarketPage = new RegionAndMarket();

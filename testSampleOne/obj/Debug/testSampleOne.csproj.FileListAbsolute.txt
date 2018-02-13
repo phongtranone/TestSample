@@ -42,3 +42,5 @@ E:\project\testsample\TestSample\testSampleOne\obj\Debug\testSampleOne.csprojRes
 E:\project\testsample\TestSample\testSampleOne\obj\Debug\testSampleOne.csproj.CoreCompileInputs.cache
 E:\project\testsample\TestSample\testSampleOne\obj\Debug\testSampleOne.exe
 E:\project\testsample\TestSample\testSampleOne\obj\Debug\testSampleOne.pdb
+D:\Project\testSampleOne\testSampleOne\bin\Debug\WebDriver.Support.dll
+D:\Project\testSampleOne\testSampleOne\bin\Debug\WebDriver.Support.xml

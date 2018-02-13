@@ -24,6 +24,7 @@ namespace testSampleOne
         public String UsernameValue;
         public String PasswordValue;
         public LoginPage1 loginPage = new LoginPage1();
+        public BrowserEnum browser;
 
         public string Email { get; set; }
 
@@ -59,7 +60,7 @@ namespace testSampleOne
         public By PasswordLocator = By.Id("Password");
         public By RememberMeLocator = By.Id("RememberMe");
         public By LoginBtnLocator = By.XPath("//input[@value='Sign in']");
-        
+
 
         public By Hambuger = By.XPath("//span[@data-toggle='offcanvas']");
         public DateTime GetCurrentDate = DateTime.Now;
@@ -73,9 +74,38 @@ namespace testSampleOne
             }
         }
 
+        public void OpenBrowser(BrowserEnum browser)
+        {
+            switch (browser)
+            {
+                default:
+                    {
+                        throw new InvalidOperationException(nameof(browser));
+                    }
+
+                case BrowserEnum.Chrome:
+                    {
+                        this.driver = new ChromeDriver("\\Driver");
+                        this.driver.Manage().Window.Maximize();
+
+                        break;
+                    }
+
+                case BrowserEnum.Firefox:
+                    {
+                        break;
+                    }
+
+                case BrowserEnum.InternetExplorer:
+                    {
+                        break;
+                    }
+            }
+        }
+
         public void CloseBrowser()
         {
-            this.driver.Close();           
+            this.driver.Close();
         }
 
         public void GoToUrl(String Url)
@@ -119,4 +149,12 @@ namespace testSampleOne
         //    loginPage.Login(driver);
         //}
     }
+
+    public enum BrowserEnum
+    {
+        Chrome = 11,
+        Firefox = 22,
+        InternetExplorer = 33
+    }
+
 }

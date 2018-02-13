@@ -24,8 +24,14 @@ namespace testSampleOne.Parser.LocationElements
                     Type = element.Attribute("type").Value,
                     Value = element.Value
                 });
-              
+
             }
+        }
+
+        public By ConstructUIElement(string lookup)
+        {
+            var newBtnNode = GetNodeByKey(lookup);
+            return ConvertToAttribute(newBtnNode.Type, newBtnNode.Value);
         }
 
         public Node GetNodeByKey(string key)

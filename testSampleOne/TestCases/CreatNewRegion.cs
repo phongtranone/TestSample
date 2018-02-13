@@ -26,6 +26,7 @@ namespace testSampleOne.TestCases
             common.GoToUrl(common.Url);
             loginPage.Login(common.driver, "siteone21@yopmail.com","1234");
             common.WaitLoad(2000);
+
             common.ClickOnElement(homePage.HamburgerMenuIcon);
             common.ClickOnElement(homePage.RegionAndMarketsMenu);
             common.WaitLoad(2000);

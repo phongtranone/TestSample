@@ -8,7 +8,7 @@ using testSampleOne.PageObject;
 
 namespace testSampleOne.TestCases
 {
-    public class CreatInsurancePolicy
+    public class CreatInsurancePolicy: ITestCase
     {
         Common common = new Common();
         InsurancePolicies InsurancePoliciesPage = new InsurancePolicies();
