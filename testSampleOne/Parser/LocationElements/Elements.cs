@@ -28,20 +28,15 @@ namespace testSampleOne.Parser.LocationElements
             }
         }
 
-        public By ConstructUIElement(string lookup)
+        public By FindElementByKey(string keyName)
         {
-            var newBtnNode = GetNodeByKey(lookup);
-            return ConvertToAttribute(newBtnNode.Type, newBtnNode.Value);
+            var node = GetNodeByKey(keyName);
+            return ConvertToAttribute(node.Type, node.Value);
         }
 
         public Node GetNodeByKey(string key)
         {
             return Nodes.FirstOrDefault(node => node.Key.Equals(key));
-        }
-
-        public Node GetNodeByKeyAndType(string key, string type)
-        {
-            return Nodes.FirstOrDefault(x => key.Equals(key) && x.Type.Equals(type));
         }
 
         public By ConvertToAttribute(string type, string value)

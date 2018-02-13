@@ -8,7 +8,7 @@ using testSampleOne.PageObject;
 
 namespace testSampleOne.TestCases
 {
-    public class CreatInsurancePolicy: ITestCase
+    public class CreatInsurancePolicy
     {
         Common common = new Common();
         InsurancePolicies InsurancePoliciesPage = new InsurancePolicies();
@@ -17,7 +17,7 @@ namespace testSampleOne.TestCases
         {
             common.OpenBrowser(common.BrowserName);
             common.GoToUrl(common.Url);
-            common.Login();
+            //common.Login();
             //common.Login(common.UsernameLocator, common.UsernameValue, common.PasswordLocator, common.PasswordValue, common.RememberMeLocator, common.LoginBtnLocator);
             common.ClickOnElement(common.Hambuger);
             common.ClickOnElement(InsurancePoliciesPage.GetInsurancePolicyMenu());

@@ -4,20 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 using testSampleOne.PageObject;
 
 namespace testSampleOne.TestCases
 {
     public class CreatNewRegion
     {
-        Common common = new Common();
-        LoginPage loginPage = new LoginPage();
-        HomePage homePage = new HomePage();
-        RegionAndMarket RegionAndMarketPage = new RegionAndMarket();
+        Common common;
+        LoginPageObject loginPage;
+        HomePageObject homePage;
+        RegionAndMarketPageObject regionAndMarketPageObject;
 
         public CreatNewRegion()
         {
-            
+            common = new Common();
+            loginPage = new LoginPageObject();
+            homePage = new HomePageObject();
+            regionAndMarketPageObject = new RegionAndMarketPageObject();
         }
 
         public void RunTest()
@@ -26,17 +30,17 @@ namespace testSampleOne.TestCases
             common.GoToUrl(common.Url);
             loginPage.Login(common.driver, "siteone21@yopmail.com","1234");
             common.WaitLoad(2000);
-
             common.ClickOnElement(homePage.HamburgerMenuIcon);
             common.ClickOnElement(homePage.RegionAndMarketsMenu);
             common.WaitLoad(2000);
-            common.ClickOnElement(RegionAndMarketPage.NewBtn);
-            common.ClickOnElement(RegionAndMarketPage.RegionItem);
+            common.ClickOnElement(regionAndMarketPageObject.NewBtn);
+            common.ClickOnElement(regionAndMarketPageObject.RegionItem);
             common.WaitLoad(2000);
-            common.InputData(RegionAndMarketPage.RegionName,"Region name " + common.GetCurrentDate);
-            common.WaitLoad(8000);
-            common.InputData(RegionAndMarketPage.RegionDescription, "Region description " + common.GetCurrentDate);
-            common.ClickOnElement(RegionAndMarketPage.DoneButtonRegion);
+            common.InputData(regionAndMarketPageObject.RegionName,"Region name " + common.GetCurrentDate);
+            common.WaitLoad(2000);
+            common.InputData(regionAndMarketPageObject.RegionDescription, "Region description " + common.GetCurrentDate);
+            common.WaitLoad(1000);
+            common.ClickOnElement(regionAndMarketPageObject.DoneButtonRegion);
             common.WaitLoad(5000);
             common.CloseBrowser();
         }

@@ -12,7 +12,7 @@ using testSampleOne.Parser.LocationElements;
 
 namespace testSampleOne
 {
-    public class Common
+    class Common
     {
         public IWebDriver driver;
 
@@ -23,7 +23,7 @@ namespace testSampleOne
         public String Url;
         public String UsernameValue;
         public String PasswordValue;
-        public LoginPage1 loginPage = new LoginPage1();
+        public LoginPageObject loginPage = new LoginPageObject();
         public BrowserEnum browser;
 
         public string Email { get; set; }
@@ -128,21 +128,7 @@ namespace testSampleOne
             driver.FindElement(ElementLocator).SendKeys(DataInput);
         }
 
-        public void Login()
-        {
-            IWebElement username = driver.FindElement(loginPage.GetUsername());
-            IWebElement password = driver.FindElement(loginPage.GetPassword());
-
-            username.SendKeys(UsernameValue);
-            password.SendKeys(PasswordValue);
-
-
-            IWebElement rememberMe = driver.FindElement(RememberMeLocator);
-            rememberMe.Click();
-
-            IWebElement loginBtn = driver.FindElement(LoginBtnLocator);
-            loginBtn.Click();
-        }
+        
 
         //public void Login()
         //{

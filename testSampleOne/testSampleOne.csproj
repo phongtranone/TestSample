@@ -57,12 +57,10 @@
   <ItemGroup>
     <Compile Include="Common.cs" />
     <Compile Include="FirstTestCase.cs" />
-    <Compile Include="PageObject\HomePage.cs" />
+    <Compile Include="PageObject\HomePageObject.cs" />
     <Compile Include="PageObject\InsurancePolicies.cs" />
-    <Compile Include="PageObject\LoginPage.cs" />
-    <Compile Include="PageObject\LoginPage1.cs" />
+    <Compile Include="PageObject\LoginPageObject.cs" />
     <Compile Include="PageObject\RegionAndMarketPageObject.cs" />
-    <Compile Include="PageObject\RegionAndMarket.cs" />
     <Compile Include="Parser\LocationElements\Elements.cs" />
     <Compile Include="Parser\LocationElements\HomeElements.cs" />
     <Compile Include="Parser\LocationElements\LocationElements.cs" />
@@ -71,11 +69,10 @@
     <Compile Include="Parser\LocationElements\RegionAndMarketsElements.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestCases\CreatNewRegionDebug.cs" />
+    <Compile Include="TestCases\CreatNewRegion.cs" />
     <Compile Include="TestCases\CreatRequestType.cs" />
     <Compile Include="TestCases\CreatNewMarket.cs" />
     <Compile Include="TestCases\CreatInsurancePolicy.cs" />
-    <Compile Include="TestCases\CreatNewRegion.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

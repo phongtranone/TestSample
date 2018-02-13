@@ -8,10 +8,10 @@ using testSampleOne.PageObject;
 
 namespace testSampleOne.TestCases
 {
-    public class CreatNewMarket: ITestCase
+    public class CreatNewMarket
     {
         Common common = new Common();
-        RegionAndMarket RegionAndMarketPage = new RegionAndMarket();
+        RegionAndMarketPageObject RegionAndMarketPage = new RegionAndMarketPageObject();
 
         public CreatNewMarket()
         {
@@ -23,7 +23,7 @@ namespace testSampleOne.TestCases
             common.OpenBrowser(common.BrowserName);
             common.GoToUrl(common.Url);
             //common.Login(common.UsernameLocator, common.UsernameValue, common.PasswordLocator, common.PasswordValue, common.RememberMeLocator, common.LoginBtnLocator);
-            common.Login();
+            //common.Login();
             common.ClickOnElement(common.Hambuger);
             //common.ClickOnElement(RegionAndMarketPage.GetRegionAndMarketMenu());
             //common.WaitLoad(2000);

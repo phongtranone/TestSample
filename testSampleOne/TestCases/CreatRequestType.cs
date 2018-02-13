@@ -29,7 +29,7 @@ namespace testSampleOne.TestCases
             common.OpenBrowser(common.BrowserName);
             common.GoToUrl(common.Url);
             // common.Login(common.UsernameLocator, common.UsernameValue, common.PasswordLocator, common.PasswordValue, common.RememberMeLocator, common.LoginBtnLocator);
-            common.Login();
+           // common.Login();
             common.ClickOnElement(common.Hambuger);
             common.ClickOnElement(RequestTypeMenu);
             common.WaitLoad(2000);
